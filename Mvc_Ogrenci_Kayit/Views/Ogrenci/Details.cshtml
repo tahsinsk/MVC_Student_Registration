@@ -1,0 +1,64 @@
+﻿@model Mvc_Ogrenci_Kayit.Models.Table
+
+@{
+    ViewBag.Title = "Detaylar";
+}
+
+<h2 class="text-info text-center">Öğrenci Detayları</h2>
+<div class="container-fluid">
+    <img src="@Model.OgrFotograf" width="150" height="150" />
+    <div class="col-md-offset-3 col-md-10 ">
+
+
+        <dl class="dl-horizontal">
+            <dt class="col-md-offset-1">
+
+            </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.OgrAd)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.OgrAd)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.OgrSoyad)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.OgrSoyad)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.OgrMail)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.OgrMail)
+            </dd>
+
+
+            <dt>
+                @Html.DisplayNameFor(model => model.OgrAdres)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.OgrAdres)
+            </dd>
+
+        </dl>
+    </div>
+    
+
+    @*<dt class="col-md-offset-5">
+            <img src="@Model.OgrFotograf" width="150"  height="150" />
+        </dt>*@
+    <p>
+        <div>
+            @Html.ActionLink("Düzenle", "Edit", new { id = Model.Ogrid }) |
+
+            @Html.ActionLink("Öğrenci Listesine Geri Git", "Index")
+        </div>
+    </p>
+</div>

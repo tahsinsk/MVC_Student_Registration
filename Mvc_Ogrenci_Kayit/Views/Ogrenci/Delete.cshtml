@@ -1,0 +1,71 @@
+﻿@model Mvc_Ogrenci_Kayit.Models.Table
+
+@{
+    ViewBag.Title = "Kayıt Silme";
+}
+
+<h2 class="text-danger text-center">Öğrenci Kaydı Silme</h2>
+
+<h4 class=" text-center">Silmek istiyor musunuz?</h4>
+<div class="col-md-offset-4 col-md-10">
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OgrAd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OgrAd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OgrSoyad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OgrSoyad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OgrMail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OgrMail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OgrFotograf)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OgrFotograf)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OgrAdres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OgrAdres)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            <div class="col-md-offset-0 col-md-10">
+                <input type="submit" value="Sil" class="btn btn-warning btn-block" />
+            </div>         
+        </div>
+    }
+</div>
+<p>
+    <div>
+        @Html.ActionLink("Öğrenci Listesine Geri Git", "Index")
+    </div>
+</p>
